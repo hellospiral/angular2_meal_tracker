@@ -1,4 +1,39 @@
-Users should be able to log foods they've eaten each day, including details about the meal and its number of calories. You may assume foods being logged are for a single day (you are not required to keep track of multiple days' meals).
+# Meal Tracker
+
+#### Angular 2 web app for tracking meals and calories
+
+#### By Matt Carlson
+
+## Description
+
+This app allows users to keep track of their meals and caloric intake. Users can log the foods they've eaten each day, including details about the meal and its number of calories.
+
+## Setup/Installation Requirements
+* node/npm
+* bower
+
+### Setup Instructions:
+* Clone this repo
+* In the terminal, navigate to the top level of the cloned directory and run npm install and bower install
+* Run gulp build and gulp serve to view the app!
+
+## Technologies Used
+
+* Angular 2
+* JavaScript
+* Node.js
+* Bower
+* Gulp
+* SASS
+* HTML
+* CSS
+* Bootstrap
+
+### License
+
+This software is licensed under the MIT license.
+
+Copyright (c) 2016 Matt Carlson
 
 Completed User Stories:
 

@@ -4,6 +4,7 @@ import { MealComponent } from './meal.component';
 import { NewMealComponent } from './new-meal.component';
 import { EditMealComponent } from './edit-meal.component';
 import { CaloriePipe } from './calorie.pipe';
+import { MealDetailsComponent } from './meal-details.component';
 
 @Component({
   selector: 'meal-list',
@@ -11,11 +12,13 @@ import { CaloriePipe } from './calorie.pipe';
   directives: [MealComponent, NewMealComponent, EditMealComponent],
   pipes: [CaloriePipe],
   template: `
+    <h3>Show:</h3>
     <select (change)="onChange($event.target.value)">
       <option value = "High">High Calorie Meals</option>
       <option value = "Low">Low Calorie Meals</option>
-      <option value = "All">All Meals</option>
+      <option selected value = "All">All Meals</option>
     </select>
+    <hr>
     <meal-display
       *ngFor = '#currentMeal of mealList | calorie:selectedOption'
       [meal]="currentMeal"
@@ -41,4 +44,5 @@ export class MealListComponent {
   onChange(option: string) {
     this.selectedOption = option;
   }
+
 }

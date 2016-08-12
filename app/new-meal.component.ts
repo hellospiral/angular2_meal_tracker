@@ -12,7 +12,7 @@ import { Meal } from './meal.model';
       <input placeholder="Name" class="col-sm-8 input-lg form-control" #newMealName>
     </div>
       <div class="form-group">
-        <input placeholder="Description" class="col-sm-8 input-lg form-control" #newMealDescription>
+        <input placeholder="Details" class="col-sm-8 input-lg form-control" #newMealDescription>
       </div>
       <div class="form-group">
         <input placeholder="Calories" class="col-sm-8 input-lg form-control" #newMealCalories>

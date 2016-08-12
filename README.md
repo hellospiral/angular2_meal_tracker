@@ -1,7 +1,5 @@
 Users should be able to log foods they've eaten each day, including details about the meal and its number of calories. You may assume foods being logged are for a single day (you are not required to keep track of multiple days' meals).
 
-Uncompleted User Stories:
-
 Completed User Stories:
 
 * I want to view a list of foods I have logged.
@@ -11,13 +9,4 @@ Completed User Stories:
 * I want the app to display details and calories when I mouse over a meal's name
 * I want the edit feature to go away when I click a button
 * I want the app to hide details/calories when I mouse away from a meal's name
-* I want to display of the total number of calories consumed in a day
-
-
-Completed Tasks:
-- create meal model (name, details, calories)
-- create meal list component
-- create meal component
-- create new meal component
-- create edit meal component
-- create pipe to filter by calories
+* I want to display the total number of calories consumed in a day

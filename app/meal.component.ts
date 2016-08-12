@@ -12,13 +12,19 @@ import { MealDetailsComponent } from './meal-details.component';
     .mealNames {
       padding: 10px;
     }
+
   `],
   template: `
     <h3 class="mealNames"
       (mouseenter)="showDetails(meal)"
       (mouseleave)="hideDetails()">
       {{ meal.name }}
-      <button (click)="clickEditButton(meal)" type="button" class="btn btn-warning btn-sm">edit</button>
+      <button
+        (click)="clickEditButton(meal)"
+        type="button"
+        class="btn btn-warning btn-sm">
+          edit
+      </button>
     </h3>
     <meal-details
       *ngIf="detailsMeal"
@@ -36,7 +42,7 @@ export class MealComponent {
   clickEditButton(meal: Meal) {
     this.onEditClick.emit(meal);
   }
-  
+
   showDetails(meal) {
     this.detailsMeal = meal;
   }

@@ -8,6 +8,9 @@ import { Meal } from './meal.model';
   styles: [`
     h5 {
       padding: 10px;
+      text-align: left;
+      font-size: 1.4rem;
+      font-weight: 200;
     }
   `],
   template: `

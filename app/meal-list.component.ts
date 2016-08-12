@@ -11,10 +11,14 @@ import { MealDetailsComponent } from './meal-details.component';
   inputs: ['mealList'],
   directives: [MealComponent, NewMealComponent, EditMealComponent],
   pipes: [CaloriePipe],
-
+  styles: [`
+      .meals {
+        padding-top: 50px;
+      }
+    `],
   template: `
-    <button type="button" (click)="totalCalories()" class="centerButton btn btn-primary btn-lrg">Calculate Today's Total Calories:</button>
     <h2 *ngIf="total">{{ summedCalories }} Calories</h2>
+    <button type="button" (click)="totalCalories()" class="centerButton btn btn-primary btn-lrg">Calculate Today's Total Calories</button>
     <hr>
     <h3>Show:</h3>
     <select (change)="onChange($event.target.value)">
@@ -34,7 +38,10 @@ import { MealDetailsComponent } from './meal-details.component';
       [meal]="selectedMeal"
       (onButtonClick)="editGoAway()">
       </edit-meal>
-    <new-meal (onSubmitNewMeal)="createNewMeal($event)"></new-meal>
+    <new-meal
+      (onSubmitNewMeal)="createNewMeal($event)"
+      (onSubmitNewMeal)="totalCalories()">
+    </new-meal>
   `
 })
 export class MealListComponent {

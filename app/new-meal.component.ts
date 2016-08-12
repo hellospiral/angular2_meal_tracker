@@ -20,7 +20,7 @@ import { Meal } from './meal.model';
       <div class="form-group">
         <input class="form-control" type="datetime-local" value="2016-08-12T13:45:00" id="example-datetime-local-input" #newMealDate>
       </div>
-    <button (click)="addMeal(newMealName, newMealDescription, newMealCalories)" class="btn-success btn-lg add-button">Add</button>
+    <button (click)="addMeal(newMealName, newMealDescription, newMealCalories, newMealDate)" class="btn-success btn-lg add-button">Add</button>
   </form>
   `
 })
@@ -29,8 +29,8 @@ export class NewMealComponent {
   constructor() {
     this.onSubmitNewMeal = new EventEmitter();
   }
-  addMeal(userMealName: HTMLInputElement, userDescription: HTMLInputElement, userCalories: HTMLInputElement) {
-    this.onSubmitNewMeal.emit([userMealName.value, userDescription.value, userCalories.value]);
+  addMeal(userMealName: HTMLInputElement, userDescription: HTMLInputElement, userCalories: HTMLInputElement, userDateTime: HTMLInputElement) {
+    this.onSubmitNewMeal.emit([userMealName.value, userDescription.value, userCalories.value, userDateTime.value]);
     userMealName.value = "";
     userDescription.value = "";
     userCalories.value = "";

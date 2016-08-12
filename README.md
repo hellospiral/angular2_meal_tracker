@@ -2,10 +2,6 @@ Users should be able to log foods they've eaten each day, including details abou
 
 Uncompleted User Stories:
 
-* I want to log a food I have eaten by submitting a form with food name, calories and details.
-
-- new meal component
-
 * I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
 
 - create pipe to filter by calories
@@ -18,7 +14,10 @@ Completed User Stories:
 
 * I want to view a list of foods I have logged.
 
+* I want to log a food I have eaten by submitting a form with food name, calories and details.
+
 Completed Tasks:
 - create meal model (name, details, calories)
 - create meal list component
 - create meal component
+- create new meal component

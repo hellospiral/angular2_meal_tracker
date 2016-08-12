@@ -5,7 +5,6 @@ Uncompleted User Stories:
 * I want to log a food I have eaten by submitting a form with food name, calories and details.
 
 - new meal component
-- meal component
 
 * I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
 
@@ -22,3 +21,4 @@ Completed User Stories:
 Completed Tasks:
 - create meal model (name, details, calories)
 - create meal list component
+- create meal component

@@ -4,9 +4,13 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-details',
   inputs: ['meal'],
+  styles: [`
+    h5 {
+      padding: 10px;
+    }
+  `],
   template: `
-    <h5> Details: {{ meal.details }}</h5>
-    <h5> Calories: {{ meal.calories }}</h5>
+    <h5> Details: {{ meal.details }} <br><br> Calories: {{ meal.calories }}</h5>
   `
 })
 export class MealDetailsComponent{

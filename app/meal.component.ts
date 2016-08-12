@@ -7,8 +7,16 @@ import { MealDetailsComponent } from './meal-details.component';
   selector: 'meal-display',
   inputs: ['meal'],
   directives: [MealDetailsComponent],
+  styles: [`
+    .mealNames {
+      padding: 10px;
+    }
+  `],
   template: `
-    <h3 (mouseenter)="showDetails(meal)"> {{ meal.name }} </h3>
+    <h3 class="mealNames" (mouseenter)="showDetails(meal)"
+      (mouseleave)="hideDetails()">
+      {{ meal.name }}
+    </h3>
     <meal-details *ngIf="detailsMeal" [meal] = 'detailsMeal'> </meal-details>
   `
 })
@@ -17,5 +25,8 @@ export class MealComponent {
   public detailsMeal: Meal;
   showDetails(meal) {
     this.detailsMeal = meal;
+  }
+  hideDetails() {
+    this.detailsMeal = undefined;
   }
 }

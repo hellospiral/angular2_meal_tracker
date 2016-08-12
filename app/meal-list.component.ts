@@ -25,7 +25,11 @@ import { MealDetailsComponent } from './meal-details.component';
       (click)="mealClicked(currentMeal)">
     </meal-display>
     <hr>
-    <edit-meal *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal>
+    <edit-meal
+      *ngIf="selectedMeal"
+      [meal]="selectedMeal"
+      (onButtonClick)="editGoAway()">
+      </edit-meal>
     <new-meal (onSubmitNewMeal)="createNewMeal($event)"></new-meal>
   `
 })
@@ -43,6 +47,9 @@ export class MealListComponent {
   }
   onChange(option: string) {
     this.selectedOption = option;
+  }
+  editGoAway() {
+    this.selectedMeal = undefined;
   }
 
 }

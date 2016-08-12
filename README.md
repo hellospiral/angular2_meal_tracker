@@ -6,18 +6,16 @@ Uncompleted User Stories:
 
 - create pipe to filter by calories
 
-* I want to click a food to edit its name, details or calories (in case I decide to pretend my fries were 100 calories instead of 365).
-
-- create edit meal component
 
 Completed User Stories:
 
 * I want to view a list of foods I have logged.
-
 * I want to log a food I have eaten by submitting a form with food name, calories and details.
+* I want to click a food to edit its name, details or calories (in case I decide to pretend my fries were 100 calories instead of 365).
 
 Completed Tasks:
 - create meal model (name, details, calories)
 - create meal list component
 - create meal component
 - create new meal component
+- create edit meal component

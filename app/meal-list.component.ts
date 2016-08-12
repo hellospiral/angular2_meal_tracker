@@ -22,7 +22,7 @@ import { MealDetailsComponent } from './meal-details.component';
     <meal-display
       *ngFor = '#currentMeal of mealList | calorie:selectedOption'
       [meal]="currentMeal"
-      (click)="mealClicked(currentMeal)">
+      (onEditClick)="mealClicked(currentMeal)">
     </meal-display>
     <hr>
     <edit-meal

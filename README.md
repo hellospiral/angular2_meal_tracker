@@ -2,7 +2,6 @@ Users should be able to log foods they've eaten each day, including details abou
 
 Uncompleted User Stories:
 
-* I want the edit feature to go away when I mouse away from it
 * I want the app to hide details/calories when I mouse away from a meal's name
 
 Completed User Stories:
@@ -12,6 +11,7 @@ Completed User Stories:
 * I want to click a food to edit its name, details or calories (in case I decide to pretend my fries were 100 calories instead of 365).
 * I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
 * I want the app to display details and calories when I mouse over a meal's name
+* I want the edit feature to go away when I click a button
 
 Completed Tasks:
 - create meal model (name, details, calories)

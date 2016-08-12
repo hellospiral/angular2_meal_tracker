@@ -1,9 +1,10 @@
-import { Component } from 'angular2/core';
+import { Component, EventEmitter } from 'angular2/core';
 import { Meal } from './meal.model';
 
 @Component({
   selector: 'meal-details',
   inputs: ['meal'],
+  outputs: ['onButtonClick'],
   styles: [`
     h5 {
       padding: 10px;
@@ -15,4 +16,11 @@ import { Meal } from './meal.model';
 })
 export class MealDetailsComponent{
   public meal: Meal;
+  public onButtonClick: EventEmitter<MealDetailsComponent>
+  constructor() {
+    this.onButtonClick = new EventEmitter();
+  }
+  clickButton() {
+    this.onButtonClick.emit(this);
+  }
 }

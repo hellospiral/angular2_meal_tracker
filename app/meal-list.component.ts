@@ -11,7 +11,10 @@ import { MealDetailsComponent } from './meal-details.component';
   inputs: ['mealList'],
   directives: [MealComponent, NewMealComponent, EditMealComponent],
   pipes: [CaloriePipe],
+
   template: `
+    <button type="button" (click)="totalCalories()" class="centerButton btn btn-primary btn-lrg">Calculate Today's Total Calories:</button>
+      <h2 *ngIf="total">{{ summedCalories }} Calories</h2>
     <h3>Show:</h3>
     <select (change)="onChange($event.target.value)">
       <option value = "High">High Calorie Meals</option>
@@ -36,7 +39,9 @@ import { MealDetailsComponent } from './meal-details.component';
 export class MealListComponent {
   public mealList: Meal[];
   public selectedMeal: Meal;
+  public summedCalories: number = 0;
   public selectedOption: string = "All";
+  public total: boolean = false;
   createNewMeal(args: string[]): void {
     this.mealList.push(
       new Meal(args[0], args[1], parseInt(args[2]), this.mealList.length)
@@ -50,6 +55,14 @@ export class MealListComponent {
   }
   editGoAway() {
     this.selectedMeal = undefined;
+  }
+  totalCalories() {
+    this.summedCalories = 0;
+    this.total = true;
+    var mealsArray = this.mealList;
+    for (var i = 0; i < mealsArray.length; i++) {
+      this.summedCalories += mealsArray[i].calories;
+    }
   }
 
 }

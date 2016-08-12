@@ -2,7 +2,7 @@ Users should be able to log foods they've eaten each day, including details abou
 
 Uncompleted User Stories:
 
-* I want the app to hide details/calories when I mouse away from a meal's name
+* I want a property that records when each food was eaten. The user could enter a date and time, or the app can generate a timestamp.
 
 Completed User Stories:
 
@@ -12,6 +12,9 @@ Completed User Stories:
 * I want options to view all foods, only high-calorie foods (more than 500 calories), or only lower-calorie foods (less than 500 calories).
 * I want the app to display details and calories when I mouse over a meal's name
 * I want the edit feature to go away when I click a button
+* I want the app to hide details/calories when I mouse away from a meal's name
+* I want to display of the total number of calories consumed in a day
+
 
 Completed Tasks:
 - create meal model (name, details, calories)

@@ -5,15 +5,20 @@ import { Meal } from './meal.model';
   selector: 'edit-meal',
   inputs: ['meal'],
   outputs: ['onButtonClick'],
+  styles: [`
+      .editInputs {
+        display: inline;
+      }
+    `],
   template: `
   <form class="form-inline">
   <div class="form-group">
     <h3>Edit Name:</h3>
-    <input [(ngModel)]="meal.name" class="col-sm-8 input-lg task-form form-control"><br>
+    <input [(ngModel)]="meal.name" class="editInputs col-sm-8 input-lg task-form form-control"><br>
     <h3>Edit Details:</h3>
-    <input [(ngModel)]="meal.details" class="col-sm-8 input-lg task-form form-control"><br>
+    <input [(ngModel)]="meal.details" class="editInputs col-sm-8 input-lg task-form form-control"><br>
     <h3>Edit Calories:</h3>
-    <input [(ngModel)]="meal.calories" class="col-sm-8 input-lg task-form form-control"><br>
+    <input [(ngModel)]="meal.calories" class="editInputs col-sm-8 input-lg task-form form-control"><br>
     <button (click)="editGoAway(meal)" class="btn btn-info">Ok</button>
   </div>
 </form>

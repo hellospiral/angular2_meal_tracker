@@ -35,7 +35,7 @@ This software is licensed under the MIT license.
 
 Copyright (c) 2016 Matt Carlson
 
-Completed User Stories:
+## Completed User Stories:
 
 * I want to view a list of foods I have logged.
 * I want to log a food I have eaten by submitting a form with food name, calories and details.

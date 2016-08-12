@@ -19,6 +19,8 @@ import { Meal } from './meal.model';
     <input [(ngModel)]="meal.details" class="editInputs col-sm-8 input-lg task-form form-control"><br>
     <h3>Edit Calories:</h3>
     <input [(ngModel)]="meal.calories" class="editInputs col-sm-8 input-lg task-form form-control"><br>
+    <h3>Edit Date/Time:</h3>
+    <input [(ngModel)]="meal.dateTime" type="datetime-local" class="form-control"><br>
     <button (click)="editGoAway(meal)" class="btn btn-info">Ok</button>
   </div>
 </form>

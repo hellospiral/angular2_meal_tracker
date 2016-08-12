@@ -2,8 +2,6 @@ Users should be able to log foods they've eaten each day, including details abou
 
 Uncompleted User Stories:
 
-* I want a property that records when each food was eaten. The user could enter a date and time, or the app can generate a timestamp.
-
 Completed User Stories:
 
 * I want to view a list of foods I have logged.

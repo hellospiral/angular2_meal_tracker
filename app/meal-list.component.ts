@@ -14,7 +14,8 @@ import { MealDetailsComponent } from './meal-details.component';
 
   template: `
     <button type="button" (click)="totalCalories()" class="centerButton btn btn-primary btn-lrg">Calculate Today's Total Calories:</button>
-      <h2 *ngIf="total">{{ summedCalories }} Calories</h2>
+    <h2 *ngIf="total">{{ summedCalories }} Calories</h2>
+    <hr>
     <h3>Show:</h3>
     <select (change)="onChange($event.target.value)">
       <option value = "High">High Calorie Meals</option>
@@ -44,7 +45,7 @@ export class MealListComponent {
   public total: boolean = false;
   createNewMeal(args: string[]): void {
     this.mealList.push(
-      new Meal(args[0], args[1], parseInt(args[2]), this.mealList.length)
+      new Meal(args[0], args[1], parseInt(args[2]), this.mealList.length, args[3])
     );
   }
   mealClicked(clickedMeal: Meal) {

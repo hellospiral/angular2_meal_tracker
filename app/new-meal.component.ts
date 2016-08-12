@@ -17,6 +17,9 @@ import { Meal } from './meal.model';
       <div class="form-group">
         <input placeholder="Calories" class="col-sm-8 input-lg form-control" #newMealCalories>
       </div>
+      <div class="form-group">
+        <input class="form-control" type="datetime-local" value="2016-08-12T13:45:00" id="example-datetime-local-input" #newMealDate>
+      </div>
     <button (click)="addMeal(newMealName, newMealDescription, newMealCalories)" class="btn-success btn-lg add-button">Add</button>
   </form>
   `

@@ -1,5 +1,4 @@
 export class Meal {
-  public selectedMeal: Meal;
-  constructor(public name: string, public details: string, public calories: number, public id: number) {
+  constructor(public name: string, public details: string, public calories: number, public id: number, public dateTime: string) {
   }
 }

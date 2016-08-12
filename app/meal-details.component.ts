@@ -11,7 +11,10 @@ import { Meal } from './meal.model';
     }
   `],
   template: `
-    <h5> Details: {{ meal.details }} <br><br> Calories: {{ meal.calories }}</h5>
+    <h5> {{ meal.details }} <br>
+      <br> {{ meal.calories }} calories<br>
+      <br> eaten on: {{ meal.dateTime.substr(5, 2) + "/" + meal.dateTime.substr(8,2) + "/" + meal.dateTime.substr(0,4) }} at {{ meal.dateTime.substr(11, 5)}}
+    </h5>
   `
 })
 export class MealDetailsComponent{

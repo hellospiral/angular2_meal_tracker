@@ -8,6 +8,7 @@ import { MealListComponent } from './meal-list.component';
   template: `
     <div class="container">
       <h1>Welcome to meal tracker!</h1>
+      <hr>
       <meal-list [mealList]="meals"></meal-list>
     </div>
   `
@@ -16,9 +17,9 @@ export class AppComponent{
   public meals: Meal[];
   constructor() {
     this.meals = [
-      new Meal("Greek Yogurt", "with almond butter and berries", 337, 0),
-      new Meal("Chicken and Cheese", "cat food", 500, 0),
-      new Meal("Bacon Burger", "eh...", 800, 0),
+      new Meal("Greek Yogurt", "with almond butter and berries", 337, 0, "2016-08-12T13:45:00"),
+      new Meal("Chicken and Cheese", "plain american slice", 500, 0, "2016-08-12T13:45:00"),
+      new Meal("Bacon Burger", "no fries", 800, 0, "2016-08-12T13:45:00")
     ];
   }
 }
